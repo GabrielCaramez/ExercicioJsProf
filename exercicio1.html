@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercicio 3 - JS</h1>
+    <p>Vamos mudar a cor de fundo da página</p>
+    <button onclick="alterarCor()">Trocar Cor</button> <!-- Botão para trocar as cores -->
+</body>
+<script>
+    let mudarCores = ['red', 'blue', 'green', 'yellow', 'black', 'white', 'purple', 'pink', 'orange', 'brown'].sort(() => Math.random() - 0.5);
+    document.body.style.backgroundColor = mudarCores[Math.floor(Math.random() * mudarCores.length)];
+    
+    function alterarCor(){
+        let corFundo = mudarCores[Math.floor(Math.random() * mudarCores.length)];
+        document.body.style.backgroundColor = corFundo;
+        document.body.style.color = (corFundo === 'black' || corFundo === 'blue' || corFundo === 'purple' || corFundo === 'brown' || corFundo ==='green' || corFundo ==='red') ? 'white' : 'black';
+    }
+</script>
+</html>
